@@ -29,8 +29,8 @@ class Todo extends Component{
                 <div class="App-header">
                 <div>
                     <input type ="text" placeholder="Enter username..."  value={this.state.inputItem} onChange={this.handleInput}/>
-                    <button onClick={this.handleSubmit}>Submit</button>
-                     <DisplayItem itemList={this.state.itemList} />
+                    <button onClick={this.handleSubmit}  disable={!this.inputItem}>Submit</button>
+                     <DisplayItem itemList={this.state.itemList}/>
                 </div>
                 </div>
 
