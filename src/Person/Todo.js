@@ -1,41 +1,51 @@
 import React, { Component } from 'react';
-import DisplayItem from "./List";
+import List from './List';
 
-class Todo extends Component{
 
+
+class ToDo extends Component{
     constructor(props){
         super(props);
-        this.state = {
-            inputItem: " ",
-            itemList: []
+        this.state={
+            inputItem: "",
+            item: []
         }
     }
-
-      handleInput = (e) => {
-            this.setState ({ inputItem: e.target.value });
+    
+    handleInput = (e) => {
+      this.setState({inputItem: e.target.value});
     }
 
-      handleSubmit = (e) => {
-            e.preventDefault();
-            this.setState({
-                inputItem: " ",
-                itemList: [...this.state.itemList, this.state.inputItem]
-            });
+    handleAdd = (e) => {
+        e.preventDefault();
+      this.setState({
+            inputItem: "",
+            item: [...this.state.item, this.state.inputItem]
+      });
+    }
 
-        }
+    handleDelete = (i) => {
+        let item =[...this.state.item]; //Refrence breaking 
+        item.splice(i, 1); //this will help in deleting element and give new array
+        this.setState({
+            item //this will return the slpiced array
+        })
+
+    }
 
     render(){
         return(
-                <div class="App-header">
+            <div className ="App-header">
+                <div className="inputWrapper">
+                    <input className="inputBox" type="text" placeholder="Enter Username..." value={this.state.inputItem} onChange={this.handleInput}/>
+                    <button className="btn" onClick={this.handleAdd}  disabled={!this.state.inputItem}>Add</button>
+                </div>
                 <div>
-                    <input type ="text" placeholder="Enter username..."  value={this.state.inputItem} onChange={this.handleInput}/>
-                    <button onClick={this.handleSubmit}  disable={!this.inputItem}>Submit</button>
-                     <DisplayItem itemList={this.state.itemList}/>
+                    <List item={this.state.item} handleDelete={this.handleDelete}/>
                 </div>
-                </div>
-
+            </div>
         )
     }
 }
 
-export default Todo;
+export default ToDo;
