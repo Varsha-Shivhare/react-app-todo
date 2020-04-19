@@ -3,6 +3,7 @@ import './App.css';
 import Todo from './Person/Todo';
 import Main from './Dynamic/Main';
 import IoPractice from './Programs/Username/index';
+import Coin from './Coin/Flip';
 
 // import { BrowserRouter, Route, Link } from "react-router-dom";
 
@@ -15,9 +16,10 @@ function App() {
   return (
     <div className="App-header">
       <h3>Programs</h3>
-      <Todo />
-      <Main />
-      <IoPractice />
+        <Todo />
+        <Main />
+        <IoPractice />
+        <Coin />
     </div>
   );
 }

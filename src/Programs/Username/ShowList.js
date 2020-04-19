@@ -1,8 +1,8 @@
 import React from 'react';
 
-function ShowList({item, handleValidate}) {
+function ShowList({item}) {
 return <ul>
-        {item.map((add, i) => <li key={i}>{add}<p onClick={() => handleValidate()}></p></li>)}
+        {item.map((add, i) => <li key={i}>{add}</li>)}
     </ul>
 }
 

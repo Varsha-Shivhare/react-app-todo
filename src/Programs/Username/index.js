@@ -23,12 +23,12 @@ handleInput = (e) => {
   }
 
   handleValidate = () => {
-    const regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
-    if((this.state.username.length<= 3) && (!regName.test(this.state.username))){
+    const regName = /^[a-zA-Z]+$/;
+    if(this.state.username && this.state.username.length<= 3 || this.state.username && !regName.test(this.state.username)){
         return "Invalid name";
-    }else{
-        return "Enter valid string."
-    }
+        }else{
+        return ""
+        }
   }
 
     render(){
@@ -40,10 +40,11 @@ handleInput = (e) => {
                 </div>  
             <div className="inputWrapper">
                 <input className="inputBox" type="text" placeholder="Enter Username..." value={username} onChange={this.handleInput}/>
-                <button className="btn" onClick={this.handleSubmit}  disabled={!username}>Submit</button>
+                <button className="btn" onClick={this.handleSubmit} disabled={!username || this.handleValidate()}>Submit</button>
+                {this.handleValidate()}
             </div>
             <div>
-                <ShowList item={this.state.item} handleValidate={this.handleValidate} />
+                <ShowList item={this.state.item} />
             </div>
         </div>
         )
