@@ -10,11 +10,21 @@ class Coin extends Component{
                 
                 // (Math.random()<0.5)? '0' : '1'
         }
+        
         this.getRandomInt = this.getRandomInt.bind(this);
-    }
+    } 
 
     getRandomInt = () => {
         const tailOrHead = (Math.random()<0.5) ? 0 : 1;
+        if(tailOrHead){
+            this.setState({
+                heads: this.state.heads+1
+            })
+        }else{
+            this.setState({
+                tails: this.state.tails+1
+            }) 
+         }
         this.setState({
             tailOrHead
         })
@@ -22,18 +32,26 @@ class Coin extends Component{
 
     render(){
         const {tailOrHead} = this.state
+        const {heads} = this.state
+        const {tails} = this.state
         return(
             <div>
                 <div>
-                    <button onClick={this.getRandomInt}></button>
-                    <label>{tailOrHead !== null && tailOrHead ? 'HEAD':'TAIL'}</label>
+                    <button className="btn" onClick={this.getRandomInt} >Flip Coin</button>
+                    <label>{tailOrHead !== null ? tailOrHead ? 'HEAD':'TAIL' :''}</label>
                 </div> 
-                <div>
-                    <label></label>
-                </div>
+                { heads && tails && <div>
+                     <label>Percent of heads: {heads/tails*100}</label>
+                     <label>Percent of tails: {tails/heads*100}</label>
+                </div>} 
             </div>
         )
     }
 }
+
+// { heads && tails && <div>
+//     <label>Percent of heads: {heads/tails*100}</label>
+//     <label>Percent of tails: {tails/heads*100}</label>
+// </div>}  this is conditional rendering 
 
 export default Coin;
