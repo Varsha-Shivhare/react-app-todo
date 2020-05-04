@@ -15,7 +15,6 @@ import Coin from './Coin/Flip';
 function App() {
   return (
     <div className="App-header">
-      <h3>Programs</h3>
         <Todo />
         <Main />
         <IoPractice />

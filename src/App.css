@@ -34,13 +34,25 @@
   border-width: 0.5px;
   border: 1px rgba(0,0,0,0.2) solid;
   margin-left: 5px;
-  margin-top: -6px;
+  margin-top: -1px;
   border-radius: 4px;
   font: inherit;
   cursor: pointer;
   background-color: lightskyblue;
   font-size: 12px black;
 	font-family: sans-serif;
+}
+
+.displayLabel{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  display: block;
+	font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 20px;
+  margin-left: 10px;
+  border-color: darkblue;
 }
 
 #dropdown{

@@ -35,8 +35,10 @@ class ToDo extends Component{
 
     render(){
         return(
+        <div className="block">
             <div className ="App-header">
                 <div className="inputWrapper">
+                  <h3>Programs</h3>
                     <input className="inputBox" type="text" placeholder="Enter Username..." value={this.state.inputItem} onChange={this.handleInput}/>
                     <button className="btn" onClick={this.handleAdd}  disabled={!this.state.inputItem}>Add</button>
                 </div>
@@ -44,6 +46,7 @@ class ToDo extends Component{
                     <List item={this.state.item} handleDelete={this.handleDelete}/>
                 </div>
             </div>
+        </div>
         )
     }
 }
