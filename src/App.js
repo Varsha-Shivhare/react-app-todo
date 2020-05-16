@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import Todo from './Person/Todo';
-import Main from './Dynamic/Main';
-import IoPractice from './Programs/Username/index';
-import Coin from './Coin/Flip';
+import Form from './Form/Form';
+// import Todo from './Person/Todo';
+// import Main from './Dynamic/Main';
+// import IoPractice from './Programs/Username/index';
+// import Coin from './Coin/Flip';
 
 // import { BrowserRouter, Route, Link } from "react-router-dom";
 
@@ -15,10 +16,11 @@ import Coin from './Coin/Flip';
 function App() {
   return (
     <div className="App-header">
-        <Todo />
+        <Form />
+        {/* <Todo />
         <Main />
         <IoPractice />
-        <Coin />
+        <Coin /> */}
     </div>
   );
 }

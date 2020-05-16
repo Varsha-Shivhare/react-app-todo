@@ -1,5 +1,5 @@
 
-.App-header {
+/* .App-header {
  display: flex;
  align-items: center;
  flex: 1;
@@ -81,5 +81,60 @@
   font-family: 'Times New Roman', Times, serif;
   margin-top: 20px;
   margin-left: 180px;
+} */
+/* form style */
+.form{
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;   
 }
 
+.info{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 0.5px;
+  border: 1px rgba(0,0,0,0.2) solid;
+  margin-top: 10px;
+  margin-left: 5px;
+  border-radius: 4px;
+  font: inherit;
+  cursor: pointer;
+  background-color: lightskyblue;
+  font-size: 12px black;
+	font-family: sans-serif;
+  }
+
+  .element{
+    padding: 6px 8px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 0.5px;
+    border: 1px rgba(0,0,0,0.2) solid;
+    margin-top: 10px;
+    margin-left: 5px;
+    border-radius: 4px;
+    font: inherit;
+    cursor: pointer;
+    background-color: lightgray;
+    font-size: 12px black;
+	  font-family: sans-serif;
+  }
+
+  .email{
+   display: flex;
+   flex: 1;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+
+ 
