@@ -2,6 +2,31 @@ import React, { Component } from 'react';
 
 
 class Form extends Component{
+    constructor(props){
+        super(props);
+        this.state={
+                firstName:{
+                    value: "",
+                    validation: "",
+                    error: ""
+                },
+                lastName:{
+                    value: "",
+                    validation: "",
+                    error: ""
+                },
+                emaiId:{
+                    value: "",
+                    validation: "",
+                    error: ""
+                },
+                mobile:{
+                    value: "",
+                    validation: "",
+                    error: ""
+                }
+        }
+    }
     render(){
         return(
             <div className="form">
@@ -18,16 +43,15 @@ class Form extends Component{
                         </select> 
                 </label>
                    <lable> 
-                        <input  className="element" type="text" placeholder="Firstname" />
-                        <input  className="element" type="text" placeholder="Lastname" />
-                  </lable>
+                        <input className="element" type="text" placeholder="Firstname" />
+                        <input className="element" type="text" placeholder="Lastname" />
+                   </lable>
                 </div>
                 <div className="email">
                     <lable>Email ID:<input  className="element"/></lable>
                     <lable>Mobile:<input  className="element"/></lable>
                 </div>
-
-                <div >
+                <div>
                     <button className="button">Show</button>
                 </div>
             </div>
