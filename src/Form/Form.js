@@ -7,26 +7,36 @@ class Form extends Component{
         this.state={
                 firstName:{
                     value: "",
-                    validation: "",
-                    error: ""
+                    validation: /^[a-zA-Z]+$/, //depending on condition it can be an array or object or string
+                    error: "Invalid first name" //it can be object or string
                 },
                 lastName:{
                     value: "",
-                    validation: "",
-                    error: ""
+                    validation: /^[a-zA-Z]+$/, //depending on condition it can be an array or object or string
+                    error: "Invalid last name" //it can be object or string
                 },
                 emaiId:{
                     value: "",
-                    validation: "",
-                    error: ""
+                    validation: /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/,
+                    error: "Invalid Email ID"
                 },
                 mobile:{
                     value: "",
-                    validation: "",
-                    error: ""
+                    validation: /^[0-9]{10}$/,
+                    error: "Invalid mobile number"
                 }
         }
     }
+
+    handleValidate = () => {
+        const regName = /^[a-zA-Z]+$/;
+        if(this.state.username && this.state.username.length<= 3 || this.state.username && !regName.test(this.state.username)){
+            return "Invalid name";
+            } else {
+              return ""
+        }
+    }
+
     render(){
         return(
             <div className="form">
