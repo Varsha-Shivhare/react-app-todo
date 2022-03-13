@@ -1,0 +1,141 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.back{
+  background-color: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);;
+  margin: 0;
+  padding: 0px;
+}
+
+.contentWrapper{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap:wrap;
+    gap: 30px 30px;
+    justify-content: center;
+    
+}
+
+.background{
+  display: inline-flex;
+  flex: 0.25;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.number{
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 3px;
+    text-align: center;
+    background-color: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);;
+    margin: 5px 5px;
+    font-style: Sans-serif;
+    color: white
+}
+
+.name{
+    font-family:  'Brush Script Std', cursive;
+    text-align: center;
+    text-shadow: 1px  1px white;
+
+}
+
+.image{
+    flex: 1;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 15px;
+}
+
+.price{
+    font-family:  'Brush Script Std', cursive;
+    text-align: center;
+    text-shadow: 1px  1px white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.cartBtn{
+  width: 80px;
+  height: 30px;
+  display: block;
+  justify-items: center;
+  align-items: center;
+  margin: 20px auto 0px auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: 'Brush Script Std', cursive;
+  font-size: 12px;
+  font-weight: 550;
+}
+
+.cartBtn:hover{
+  background-color: peachpuff;
+  text-shadow: white;
+}
+
+.navBtn{
+  border-radius: 5px;
+  background-color: #E3F0FF;
+  border-radius: 12px;
+  color: black;
+  text-align: center;
+  font-family: 'Brush Script Std', cursive;
+  font-size: 20px;
+  width: 125px;
+  height: 40px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2px;
+  margin: 10px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+   
+} 
+
+.navBtn:hover{
+    background-color: peachpuff;
+    text-shadow: white;
+}
+
+.navBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .navBtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .navBtn:hover span {
+    padding-right: 25px;
+  }
+  
+  .navBtn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
